@@ -1838,3 +1838,194 @@ button,
     transition: all 500ms ease-out;
   }
 }
+
+/* ============================================
+ * AVATAR CONNECTED MODE - Glass Tint Shift
+ * ============================================
+ * When avatar is connected, glass shifts from
+ * white-frosted to black-tinted for better
+ * contrast against the brighter video background.
+ * 
+ * This targets both:
+ * 1. Custom glass- utility classes
+ * 2. Tailwind bg-white/X classes used in templates
+ * ============================================ */
+
+/* Add smooth transition to elements that will shift */
+[class*="bg-white\\/"],
+[class*="backdrop-blur"],
+.glass-subtle,
+.glass-medium,
+.glass-strong,
+.glass-prominent,
+.glass-card,
+.glass-button {
+  transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Override Tailwind bg-white/X to bg-black/X when connected */
+/* Darker tint for better contrast against brighter avatar video */
+body.avatar-connected div.bg-white\/5,
+body.avatar-connected .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+body.avatar-connected div.bg-white\/10,
+body.avatar-connected button.bg-white\/10,
+body.avatar-connected .bg-white\/10 {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+body.avatar-connected div.bg-white\/15,
+body.avatar-connected .bg-white\/15 {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+body.avatar-connected div.bg-white\/20,
+body.avatar-connected button.bg-white\/20,
+body.avatar-connected .bg-white\/20 {
+  background-color: rgba(0, 0, 0, 0.35) !important;
+}
+
+body.avatar-connected div.bg-white\/25,
+body.avatar-connected .bg-white\/25 {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+body.avatar-connected div.bg-white\/30,
+body.avatar-connected .bg-white\/30 {
+  background-color: rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Override border-white/X to more subtle borders when connected */
+body.avatar-connected .border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+body.avatar-connected .border-white\/20 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.avatar-connected .border-white\/30 {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Glass utility class overrides */
+body.avatar-connected .glass-subtle,
+body.avatar-connected .glass-subtle-hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.avatar-connected .glass-medium,
+body.avatar-connected .glass-medium-hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body.avatar-connected .glass-strong,
+body.avatar-connected .glass-strong-hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+body.avatar-connected .glass-prominent,
+body.avatar-connected .glass-prominent-hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+body.avatar-connected .glass-card {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body.avatar-connected .glass-button {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+ * TEXT COLOR OVERRIDES - Connected Mode
+ * ============================================
+ * 1. First: Make all gray text white (for dark glass backgrounds)
+ * 2. Then: Restore dark text for elements inside light backgrounds
+ * ============================================ */
+
+/* Base rule: Gray text becomes white when connected */
+body.avatar-connected .text-gray-900,
+body.avatar-connected .text-gray-800 {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+body.avatar-connected .text-gray-700 {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+body.avatar-connected .text-gray-600 {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+body.avatar-connected .text-gray-500 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+body.avatar-connected .text-gray-400 {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Override: Restore dark text INSIDE light white backgrounds (40%+ opacity) */
+/* In attribute selectors, the / doesn't need escaping inside the string */
+body.avatar-connected [class*="bg-white/4"] .text-gray-900,
+body.avatar-connected [class*="bg-white/4"] .text-gray-800,
+body.avatar-connected [class*="bg-white/5"]:not(.bg-white\/5) .text-gray-900,
+body.avatar-connected [class*="bg-white/5"]:not(.bg-white\/5) .text-gray-800,
+body.avatar-connected [class*="bg-white/6"] .text-gray-900,
+body.avatar-connected [class*="bg-white/6"] .text-gray-800,
+body.avatar-connected [class*="bg-white/7"] .text-gray-900,
+body.avatar-connected [class*="bg-white/7"] .text-gray-800,
+body.avatar-connected [class*="bg-white/8"] .text-gray-900,
+body.avatar-connected [class*="bg-white/8"] .text-gray-800,
+body.avatar-connected [class*="bg-white/9"] .text-gray-900,
+body.avatar-connected [class*="bg-white/9"] .text-gray-800,
+body.avatar-connected [class*="bg-gray-"] .text-gray-900,
+body.avatar-connected [class*="bg-gray-"] .text-gray-800,
+body.avatar-connected [class*="bg-gradient-to-b from-gray"] .text-gray-900,
+body.avatar-connected [class*="bg-gradient-to-b from-gray"] .text-gray-800 {
+  color: rgb(17, 24, 39) !important;
+}
+
+body.avatar-connected [class*="bg-white/4"] .text-gray-700,
+body.avatar-connected [class*="bg-white/5"]:not(.bg-white\/5) .text-gray-700,
+body.avatar-connected [class*="bg-white/6"] .text-gray-700,
+body.avatar-connected [class*="bg-white/7"] .text-gray-700,
+body.avatar-connected [class*="bg-white/8"] .text-gray-700,
+body.avatar-connected [class*="bg-white/9"] .text-gray-700,
+body.avatar-connected [class*="bg-gray-"] .text-gray-700 {
+  color: rgb(55, 65, 81) !important;
+}
+
+body.avatar-connected [class*="bg-white/4"] .text-gray-600,
+body.avatar-connected [class*="bg-white/5"]:not(.bg-white\/5) .text-gray-600,
+body.avatar-connected [class*="bg-white/6"] .text-gray-600,
+body.avatar-connected [class*="bg-white/7"] .text-gray-600,
+body.avatar-connected [class*="bg-white/8"] .text-gray-600,
+body.avatar-connected [class*="bg-white/9"] .text-gray-600,
+body.avatar-connected [class*="bg-gray-"] .text-gray-600 {
+  color: rgb(75, 85, 99) !important;
+}
+
+body.avatar-connected [class*="bg-white/4"] .text-gray-500,
+body.avatar-connected [class*="bg-white/5"]:not(.bg-white\/5) .text-gray-500,
+body.avatar-connected [class*="bg-white/6"] .text-gray-500,
+body.avatar-connected [class*="bg-white/7"] .text-gray-500,
+body.avatar-connected [class*="bg-white/8"] .text-gray-500,
+body.avatar-connected [class*="bg-white/9"] .text-gray-500,
+body.avatar-connected [class*="bg-gray-"] .text-gray-500 {
+  color: rgb(107, 114, 128) !important;
+}
+
+body.avatar-connected [class*="bg-white/4"] .text-gray-400,
+body.avatar-connected [class*="bg-white/5"]:not(.bg-white\/5) .text-gray-400,
+body.avatar-connected [class*="bg-white/6"] .text-gray-400,
+body.avatar-connected [class*="bg-white/7"] .text-gray-400,
+body.avatar-connected [class*="bg-white/8"] .text-gray-400,
+body.avatar-connected [class*="bg-white/9"] .text-gray-400,
+body.avatar-connected [class*="bg-gray-"] .text-gray-400 {
+  color: rgb(156, 163, 175) !important;
+}

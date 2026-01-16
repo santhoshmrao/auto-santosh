@@ -108,11 +108,11 @@ export const TeleglassIcons: React.FC<TeleglassIconsProps> = ({
         top: 'var(--teleglass-top)',
       } : undefined}
     >
-      {/* Speaker Icon - only show when connected */}
+      {/* Speaker Icon - only show when connected, hidden on mobile */}
       {isConnected && (
         <div
           onClick={onSoundToggle}
-          className={`${getIconClasses(isSoundOn, !isSoundOn)} transition-opacity duration-300 ${shouldShowSpeaker ? 'opacity-100' : 'opacity-0'}`}
+          className={`hidden sm:flex ${getIconClasses(isSoundOn, !isSoundOn)} transition-opacity duration-300 ${shouldShowSpeaker ? 'opacity-100' : 'opacity-0'}`}
           style={{ pointerEvents: 'auto' }}
         >
           {isSoundOn ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5" />}

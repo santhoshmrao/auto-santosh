@@ -8,6 +8,7 @@ import React from "react";
 import { ChevronRight, CheckCircle } from "lucide-react";
 import { useSound } from "@/hooks/useSound";
 import { notifyTele } from "@/utils/acknowledgmentHelpers";
+import { SmartImage } from "@/components/ui/SmartImage";
 
 interface BulletPoint {
     text: string;
@@ -53,10 +54,16 @@ export const SplitContent: React.FC<SplitContentProps> = ({
                         alt={title}
                         className="w-full h-full object-cover"
                     />
+                ) : imagePrompt ? (
+                    <SmartImage
+                        assetId={imagePrompt}
+                        alt={title}
+                        className="w-full h-full object-cover"
+                    />
                 ) : (
                     <div className="w-full h-full flex items-center justify-center p-4">
                         <p className="text-sm text-white/40 text-center">
-                            {imagePrompt || "Visual representation"}
+                            Visual representation
                         </p>
                     </div>
                 )}

@@ -994,6 +994,7 @@ const Index = () => {
     } finally {
       setAvatarState("off");
       setIsConnecting(false);
+      document.body.classList.remove('avatar-connected');
 
       // Update TeleglassSection state
       const setters = (window as any).setTeleglassState;
@@ -1092,6 +1093,7 @@ const Index = () => {
       await new Promise((r) => setTimeout(r, 1000));
 
       setAvatarState("connected");
+      document.body.classList.add('avatar-connected');
 
       // Create new session ID for this avatar connection
       const sessionId = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;

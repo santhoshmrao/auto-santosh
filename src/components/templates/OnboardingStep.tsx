@@ -611,7 +611,7 @@ export const OnboardingStep: React.FC<OnboardingStepProps> = ({
                                                 >
                                                     <div className="h-40 flex items-center justify-center bg-gradient-to-b from-gray-50 to-white overflow-hidden">
                                                         {device.imageUrl ? (
-                                                            <img src={device.imageUrl} alt={device.name} className="w-full h-full object-contain p-4" />
+                                                            <img src={device.imageUrl} alt={device.name} className="w-full h-full object-cover" />
                                                         ) : getDeviceIcon(device.name)}
                                                     </div>
                                                     <div className="px-5 pb-5">

@@ -20,8 +20,8 @@
     | 1 | Value to Banks | New Revenue Stream | "Monetize your digital channels—One API, your branding, zero disruption." |
     | 2 | Value to Merchants | Right Offer, Right Time | "Merchants get POS, capital, credit—right where they bank." |
     | 3 | Why It Works | Trust + Timing = Conversion | "Merchants trust you. Contextual offers convert." |
-    | 4 | Bank Experience | What Merchants See | "See offers that blend seamlessly into your portal." |
-    | 5 | Onboarding Flow | 10 Frictionless Steps | "10 steps, mobile-friendly, device shipped in days." |
+    | 4 | See the Offer Experience | Seamlessly Embedded | "See offers that blend seamlessly into your portal." |
+    | 5 | See the Onboarding Flow | 10 Frictionless Steps | "10 steps, mobile-friendly, device shipped in days." |
 
     **After Chapter 5 → Book the Meeting**
     "Would you like to schedule time with our team to explore how this fits your bank?"
@@ -107,7 +107,7 @@
     | HOME | Platform overview |
     | BANK PORTAL | Offer in bank portal |
     | DEVICES | Clover device comparison |
-    | ONBOARDING | 10-step carousel |
+    | ONBOARDING | 10-step onboarding flow |
     | INTEGRATION | One API details |
     | BOOK DEMO | Book meeting |
 

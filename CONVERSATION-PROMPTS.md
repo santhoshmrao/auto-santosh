@@ -55,7 +55,7 @@ This document captures all user prompts from the current conversation session, i
 1. Value to Banks
 2. Value to Merchants
 3. Why It Works
-4. See the Bank Experience
+4. See the Offer Experience
 5. See the Onboarding Flow
 
 **Action Taken:**
@@ -101,7 +101,7 @@ When welcoming bankers, lead with:
 1. **Value to Banks** — New Revenue Stream
 2. **Value to Merchants** — Right Offer, Right Time
 3. **Why It Works** — Trust + Timing = Conversion
-4. **See the Bank Experience** — What Merchants See
+4. **See the Offer Experience** — Seamlessly Embedded
 5. **See the Onboarding Flow** — 10 Frictionless Steps
 
 ### Evidence Is Underneath
