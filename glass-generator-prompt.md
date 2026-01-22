@@ -489,7 +489,7 @@ Live updates: Tele re-renders with new props as conversation progresses. Confirm
       "columns": 4,
       "callouts": [
         { "id": "c1", "icon": "zap", "title": "Single Endpoint", "description": "One RESTful API covers offers, onboarding, devices, fulfillment.", "highlight": true, "actionPhrase": "Show me the API documentation" },
-        { "id": "c2", "icon": "clock", "title": "2-6 Weeks Live", "description": "Dedicated TAM, Integration Engineer, Solutions Architect assigned.", "actionPhrase": "Show me the implementation timeline" },
+        { "id": "c2", "icon": "clock", "title": "8 Weeks Live", "description": "Dedicated TAM, Integration Engineer, Solutions Architect assigned.", "actionPhrase": "Show me the implementation timeline" },
         { "id": "c3", "icon": "shield", "title": "Enterprise Security", "description": "OAuth 2.0, TLS 1.3, PCI DSS Level 1, SOC 2 Type II.", "actionPhrase": "Show me security compliance" },
         { "id": "c4", "icon": "trending-up", "title": "500M+ tx/month", "description": "Auto-scaling on AWS. 99.99% uptime SLA. <100ms latency.", "actionPhrase": "Show me scalability details" }
       ]
